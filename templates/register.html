@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card">
+    <h2>Регистрация</h2>
+    <form method="POST">
+        <input name="username" placeholder="Логин" required>
+        <input name="email" placeholder="Email (необязательно)">
+        <input type="password" name="password" placeholder="Пароль" required>
+        <button class="btn">Создать аккаунт</button>
+    </form>
+    <p>Уже есть аккаунт? <a href="{{ url_for('login') }}">Войти</a></p>
+</div>
+{% endblock %}

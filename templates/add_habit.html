@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="card">
+    <h2>Новая привычка</h2>
+    <form method="POST">
+        <input name="name" placeholder="Название (например: Пить воду)" required>
+        <textarea name="description" placeholder="Описание"></textarea>
+        <input type="number" name="points_reward" value="10" min="1" placeholder="Очки за выполнение">
+        <label>Цвет:</label>
+        <input type="color" name="color" value="#e91e63">
+        <button class="btn">Создать</button>
+        <a href="{{ url_for('dashboard') }}">← Назад</a>
+    </form>
+</div>
+{% endblock %}
